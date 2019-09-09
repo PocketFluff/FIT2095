@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href= '/'>Home</a>
+	<a href= '/showTaskPage'>List Task</a>
+	<a href= '/showDeveloperPage'>List Developer</a>
+	<a href = '/addTaskPage'>New Task</a>
+	<a href = '/addDeveloperPage'>New Developer</a>
+	<a href= '/deleteTaskPage'>Delete Task</a>
+	<a href = 'updateTaskPage'>Update Task</a>
+
+	<p>To delete all tasks, please enter the task ID below and click 'Delete'.</p>
+	<p>
+	<table>
+        <form action="/deleteTask" method="POST">
+			<tr>
+				<td>Task ID:</td>
+				<td><input type="number" name="taskID"><br></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Delete"></td>
+			</tr>
+        </form>
+	</table><br>
+		<form action="/deleteAllTask" method="POST">
+			<input type="submit" value="Delete All Tasks">
+		</form>
+    </p>
+</body>
+
+</html>

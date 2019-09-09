@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href= '/'>Home</a>
+	<a href= '/showTaskPage'>List Task</a>
+	<a href= '/showDeveloperPage'>List Developer</a>
+	<a href = '/addTaskPage'>New Task</a>
+	<a href = '/addDeveloperPage'>New Developer</a>
+	<a href= '/deleteTaskPage'>Delete Task</a>
+	<a href = 'updateTaskPage'>Update Task</a>
+    
+	<p>
+	<table>
+        <form action="/updateTask" method="POST">
+			<tr>
+				<td>Task ID:</td>
+				<td><input type="number" name="taskID"><br></td>
+			</tr>
+			<tr>
+				<td>Task Status:</td>
+				<td><select name = "status">
+					<option value="In Progress" name = "progress">In Progress</option>
+					<option value="Completed" name = "completed">Completed</option>
+				</select></td>
+			</tr>
+			<tr>	
+				<td><input type="submit" value="Enter"></td>
+			</tr>
+        </form>
+	</table>
+    </p>
+    
+</body>
+
+</html>

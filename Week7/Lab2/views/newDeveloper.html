@@ -1,0 +1,42 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href= '/'>Home</a>
+	<a href= '/showTaskPage'>List Task</a>
+	<a href= '/showDeveloperPage'>List Developer</a>
+	<a href = '/addTaskPage'>New Task</a>
+	<a href = '/addDeveloperPage'>New Developer</a>
+	<a href= '/deleteTaskPage'>Delete Task</a>
+	<a href = 'updateTaskPage'>Update Task</a>
+	
+    <p>
+	<table>
+		<form action="/insertDeveloper" method="POST">
+			<tr>
+				<td>Developer Name:</td>
+				<td><input type="text" name="firstName" value="First Name"><br></td>
+				<td><input type="text" name="lastName" value="Last Name"><br></td>
+			</tr>
+			<tr>	
+				<td>Level (Beginner or Expert)</td>
+				<td><input type="text" name="level"><br></td>
+			</tr>
+			<tr>	
+				<td>Address:</td>
+				<td><input type="text" name = "unit" value= "Unit"></br></td>
+				<td><input type="text" name = "street" value= "Street"></br></td>
+				<td><input type="text" name = "suburb" value="Suburb"></br></td>
+				<td><input type="text" name = "state" value="State"></br></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Enter"></td>
+			</tr>
+        </form>
+	</table>
+    </p>
+    
+</body>
+
+</html>
