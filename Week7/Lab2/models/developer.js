@@ -13,9 +13,9 @@ var developerSchema = mongoose.Schema({
         type: String,
         required: true,
         uppercase: true,
-        validator: {
-            validate: function(developerLevel){
-                return developerLevel.toUpperCase() === "BEGINNER" || developerLevel.toUpperCase() === "EXPERT";
+        validate: {
+            validator: function(developerLevel){
+                return developerLevel.toUpperCase() == "BEGINNER" || developerLevel.toUpperCase() == "EXPERT";
             },
             message: 'Value entered is not \'Beginner\' or \'Expert\''
         }

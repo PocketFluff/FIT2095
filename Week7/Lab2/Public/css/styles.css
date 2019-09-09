@@ -1,7 +1,32 @@
 body {
-    background-color: Gray;
+    background-color: #d3ddf8;
 }
 
 table,th,td {
     border: 1px solid black;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+#menu {
+	margin:10px;
+	width:900px;
+	font-family: sans-serif;
+}
+#menu li {
+	display:block;
+	width:120px;
+	float:left;
+	margin-left:2px;
+	border:1px solid #000;
+}
+
+#menu a {
+	display:block;
+	padding:3px;
+	text-decoration:none;
+	background-color:#fff;
+	color:#009;
 }

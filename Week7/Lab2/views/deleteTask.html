@@ -3,31 +3,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href= '/'>Home</a>
-	<a href= '/showTaskPage'>List Task</a>
-	<a href= '/showDeveloperPage'>List Developer</a>
-	<a href = '/addTaskPage'>New Task</a>
-	<a href = '/addDeveloperPage'>New Developer</a>
-	<a href= '/deleteTaskPage'>Delete Task</a>
-	<a href = 'updateTaskPage'>Update Task</a>
-
-	<p>To delete all tasks, please enter the task ID below and click 'Delete'.</p>
-	<p>
-	<table>
-        <form action="/deleteTask" method="POST">
-			<tr>
-				<td>Task ID:</td>
-				<td><input type="number" name="taskID"><br></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Delete"></td>
-			</tr>
-        </form>
-	</table><br>
-		<form action="/deleteAllTask" method="POST">
-			<input type="submit" value="Delete All Tasks">
-		</form>
+    <nav>
+        <ul id="menu">
+            <li><a href= '/'>Home</a></li>
+            <li><a href= '/showTaskPage'>List Task</a></li>
+            <li><a href= '/showDeveloperPage'>List Developer</a></li>
+            <li><a href = '/addTaskPage'>New Task</a></li>
+            <li><a href = '/addDeveloperPage'>New Developer</a></li>
+            <li><a href= '/deleteTaskPage'>Delete Task</a></li>
+            <li><a href = '/updateTaskPage'>Update Task</a></li>
+        </ul>
+    </nav>
+    <p>
+        <br>
     </p>
+    <div>
+        <table>
+                <form action="/deleteTask" method="POST">
+                    <tr>
+                        <td>Task ID:</td>
+                        <td><input type="number" name="taskID"><br></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="Delete"></td>
+                    </tr>
+                </form>
+        </table><br>
+            <form action="/deleteAllTask" method="POST">
+                <input type="submit" value="Delete All Completed Tasks">
+            </form>
+    </div>
 </body>
 
 </html>

@@ -189,7 +189,7 @@ app.post('/deleteTask', function(request, response){
 
 app.post('/deleteAllTask', function(request, response){
 
-    Task.deleteMany({}, function (error, result){
+    Task.deleteMany({'status' : "Completed"}, function (error, result){
         if (error){
             console.log('Error deleting all tasks.')
             throw error;

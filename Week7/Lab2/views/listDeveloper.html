@@ -3,18 +3,24 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href= '/'>Home</a>
-	<a href= '/showTaskPage'>List Task</a>
-	<a href= '/showDeveloperPage'>List Developer</a>
-	<a href = '/addTaskPage'>New Task</a>
-	<a href = '/addDeveloperPage'>New Developer</a>
-	<a href= '/deleteTaskPage'>Delete Task</a>
-	<a href = 'updateTaskPage'>Update Task</a>
+    <nav>
+        <ul id="menu">
+            <li><a href= '/'>Home</a></li>
+            <li><a href= '/showTaskPage'>List Task</a></li>
+            <li><a href= '/showDeveloperPage'>List Developer</a></li>
+            <li><a href = '/addTaskPage'>New Task</a></li>
+            <li><a href = '/addDeveloperPage'>New Developer</a></li>
+            <li><a href= '/deleteTaskPage'>Delete Task</a></li>
+            <li><a href = '/updateTaskPage'>Update Task</a></li>
+        </ul>
+    </nav>
+    <br>
 	
     <h3>List of Developers</h3>
     <table>
         <tr>
-			<td>ID</td>
+            <td>ID</td>
+            <td>_id</td>
             <td>Name</td>
 			<td>Level</td>
             <td>Address</td>
@@ -23,7 +29,10 @@
             <tr>
 				<td>
 					<%= db[i]._ID %>
-				</td>
+                </td>
+                <td>
+                    <%= db[i]._id %>
+                </td>
                 <td>
                     <%= db[i].name.firstName.concat(' ', db[i].name.lastName) %>
                 </td>
