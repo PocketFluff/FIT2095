@@ -1,6 +1,5 @@
 var Actor = require('../models/actor');
 var Movie = require('../models/movie');
-const actorsObj = require('./routers/actor');
 const mongoose = require('mongoose');
 
 module.exports = {
