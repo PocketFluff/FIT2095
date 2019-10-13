@@ -69,11 +69,12 @@ module.exports = {
 
 
     addMovie: function (req, res) {
+        console.log("HELLOOOO");
         Actor.findOne({ _id: req.params.id }, function (err, actor) {
             if (err) return res.status(400).json(err);
             if (!actor) return res.status(404).json();
             
-            Movie.findOne({ _id: req.body.id }, function (err, movie) {
+            Movie.findOne({ _id: req.body.movieid }, function (err, movie) {
                 if (err) return res.status(400).json(err);
                 if (!movie) return res.status(404).json();
 

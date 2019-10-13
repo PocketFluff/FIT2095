@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 
-const actors = require('./routers/actor');
-const movies = require('./routers/movie');
+const actors = require('../movieAng/routers/actor');
+const movies = require('../movieAng/routers/movie');
 let path = require('path');
 
 const app = express();
@@ -26,17 +26,15 @@ mongoose.connect('mongodb://localhost:27017/movies', function (err) {
 
 //Configuring Endpoints
 //Actor RESTFul endpoionts
-app.get('/actor', actors.getAll);
+app.post('/actors/:id/movies', actors.addMovie);
 
 app.get('/actors', actors.getAll);
 app.post('/actors', actors.createOne);
 app.get('/actors/:id', actors.getOne);
 app.put('/actors/:id', actors.updateOne);
-app.post('/actors/:id/movies', actors.addMovie);
 app.delete('/actors/:id', actors.deleteOne);
 app.delete('/actors/:actorId/:movieId', actors.removeMovie);
 app.put('/actors/', actors.addYears);
-
 
 //Movie RESTFul  endpoints
 app.delete('/movie/:delYear', movies.deleteMovieYear);

@@ -14,7 +14,6 @@ module.exports = {
 
 
     createOne: function (req, res) {
-        console.log("!!!!!!!!!!!");
         let newMovieDetails = req.body;
         newMovieDetails._id = new mongoose.Types.ObjectId();
 
@@ -117,12 +116,6 @@ module.exports = {
 
             res.json(movie);
         });
-
-        // Movie.findOneAndRemove({year: 1990}, function(err,movie){
-        //     if (err) return res.status(400).json(err);
-
-        //     res.json(movie);
-        // });
     }
 
 };
